@@ -1,0 +1,40 @@
+<nb-layout>
+
+  <nb-layout-header>
+
+    <h2>list Movies</h2>
+    <p></p>
+  <a routerLink="list">bookmark</a>
+
+
+  </nb-layout-header>
+  <nb-layout-column class="colored-column-basic">
+
+
+  	
+      <form #simpleForm="ngForm" (ngSubmit) = "getUserVal(simpleForm.value)">
+
+  		 <input type="text" name = "username" nbInput ngModel placeholder="moviename">
+  		 <button nbButton status="warning">submit</button>
+	</form>
+
+	<p></p>
+
+	<ul *ngFor="let movie of movies">
+  <h4>{{movie.Title}}</h4>
+  <h6>rating : {{movie.Rated}}</h6>
+  <p></p>
+  <img (click) = "SaveBook(movie)" src="{{movie.Poster}}">
+  <p></p>
+  <h6>release date : {{movie.Released}}</h6>
+
+          <nb-toggle [checked] = "toggle(movie)" status="primary">bookmark</nb-toggle>
+<!-- 
+              <button nbButton hero (click) = "SaveBook(movie)" status={{Mnaag}}>{{status}}</button> -->
+              
+          <!-- click only once don't wait for the button to react -->
+  <!-- <button nbButton (click) = "SaveBook(movie)" status="success">bookmark</button> -->
+</ul>
+
+</nb-layout-column>
+  </nb-layout>
