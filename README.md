@@ -4,4 +4,4 @@
 * open in firefox (might not work in chrome)
 * to add bookmark, click on the image (clicking on the button has no effect)
 
-First UI/UX project ,learnt foundational angular,it was fun 
+First UI/UX project ,learnt my first frontend framework, angular, it was fun !
